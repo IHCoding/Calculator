@@ -27,12 +27,10 @@ namespace Calculator.Unit.Test
             var x = 4;
             var y = 5;
 
-            Assert.That(uut.Add(x, y), Is.EqualTo(19));
-            Assert.That(uut.Subtract(x, y), Is.EqualTo(1));
+            Assert.That(uut.Add(x, y), Is.EqualTo(9));
+            Assert.That(uut.Subtract(x, y), Is.EqualTo(-1));
 
         }
-
-
 
 
         [SetUp]
@@ -45,6 +43,7 @@ namespace Calculator.Unit.Test
         [TestCase(-3, -3, -6)]
         [TestCase(3, -3, 0)]
         [TestCase(-3, 0, -3)]
+        [TestCase(0, 0, 0)]
 
         public void Add_NegPosNumbers_CorrectResult(int x, int y, int r)
         {
