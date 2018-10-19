@@ -28,7 +28,7 @@ namespace Calculator.Unit.Test
             var y = 5;
 
             Assert.That(uut.Add(x, y), Is.EqualTo(9));
-            Assert.That(uut.Subtract(x, y), Is.EqualTo(-1));
+            Assert.That(uut.Subtract(x, y), Is.EqualTo(1));
 
         }
 
