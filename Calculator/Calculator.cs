@@ -53,24 +53,24 @@ namespace Calculator
             }
         }
 
-        public void PrintCalculation(Action action, double x, double y)
-        {
-            switch (action)
-            {
-                case Action.Add:
-                    Console.WriteLine("The sum of {0} and {1} is: {2}", x, y, Add(x, y));
-                    break;
-                case Action.Subtract:
-                    Console.WriteLine("The difference of {0} and {1} is: {2}", x, y, Subtract(x, y));
-                    break;
-                case Action.Multiply:
-                    Console.WriteLine("The product of {0} and {1} is: {2}", x, y, Multiply(x, y));
-                    break;
-                case Action.Power:
-                    Console.WriteLine("{0} raised to the power of {1} is: {2}", x, y, Power(x, y));
-                    break;
-            }
-        }
+        //public static void PrintCalculation(Action action, double x, double y)
+        //{
+        //    switch (action)
+        //    {
+        //        case Action.Add:
+        //            Console.WriteLine("The sum of {0} and {1} is: {2}", x, y, Add(x, y));
+        //            break;
+        //        case Action.Subtract:
+        //            Console.WriteLine("The difference of {0} and {1} is: {2}", x, y, Subtract(x, y));
+        //            break;
+        //        case Action.Multiply:
+        //            Console.WriteLine("The product of {0} and {1} is: {2}", x, y, Multiply(x, y));
+        //            break;
+        //        case Action.Power:
+        //            Console.WriteLine("{0} raised to the power of {1} is: {2}", x, y, Power(x, y));
+        //            break;
+        //    }
+        //}
     }
 }
 
