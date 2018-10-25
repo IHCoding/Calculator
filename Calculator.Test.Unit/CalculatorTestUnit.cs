@@ -29,7 +29,6 @@ namespace Calculator.Unit.Test
 
             Assert.That(uut.Add(x, y), Is.EqualTo(9));
             Assert.That(uut.Subtract(x, y), Is.EqualTo(-1));
-
         }
 
 
@@ -45,42 +44,28 @@ namespace Calculator.Unit.Test
         //[TestCase(-3, 0, -3)]
         //[TestCase(0, 0, 0)]
 
-        [TestCaseSource(typeof(TestCaseSource))]
+        [TestCaseSource(typeof(TestCaseSourceAddition))]
         public void Add_NegPosNumbers_CorrectResult(int x, int y, int r)
         {
             Assert.That(uut.Add(x, y), Is.EqualTo(r));
         }
+        
 
-
-        [TestCase(1, 0, 1)]
-        [TestCase(-3, -3, 0)]
-        [TestCase(3, -3, 6)]
-        [TestCase(0, 1, -1)]
-
+        [TestCaseSource(typeof(TestCaseSourceSubtraction))]
         public void Subtract_NegPosNumbers_CorrectResult(int x, int y, int r)
         {
             Assert.That(uut.Subtract(x, y), Is.EqualTo(r));
         }
 
-
-        [TestCase(2, 2, 4)]
-        [TestCase(-4, -4, 16)]
-        [TestCase(-3, 9, -27)]
-        [TestCase(10, 0, 0)]
+        
+        [TestCaseSource(typeof(TestCaseSourceMultiply))]
         public void Multiply_MultiplyNumber_CorrectResult(int x, int y, int r)
         {
             Assert.That(uut.Multiply(x, y), Is.EqualTo(r));
         }
 
-
-        [TestCase(2, 2, 4)]
-        [TestCase(-4, -4, 16)]
-        [TestCase(-3, 3, -9)]
-        [TestCase(10, 0, 0)]
-        [TestCase(10, 2, 20)]
-        [TestCase(10, 0, 0)]
-        [TestCase(10, 0.5, 5)]
-
+        
+        [TestCaseSource(typeof(TestCaseSourcePower))]
         public void Power_RaiseNumbers_CorrectResult(double x, double y, double r)
         {
             Assert.That(uut.Multiply(x, y), Is.EqualTo(r));
@@ -98,7 +83,6 @@ namespace Calculator.Unit.Test
         //        sut.Add(numToAdd);
         //        sut.Divide(numToDivideBy);
         //    }
-
         //}
 
 
