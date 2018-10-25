@@ -5,6 +5,8 @@ namespace Calculator
 {
     public class Calculator
     {
+        private double currentValue = 0;
+
         public enum Action { Add, Subtract, Multiply, Power }
 
         public double Add(double x, double y)
@@ -52,6 +54,13 @@ namespace Calculator
                 }*/
             }
         }
+
+        public double Divide(double x, double y)
+        {
+            return x / y;
+        }
+
+
 
         //public static void PrintCalculation(Action action, double x, double y)
         //{

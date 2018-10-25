@@ -28,7 +28,7 @@ namespace Calculator.Unit.Test
             var y = 5;
 
             Assert.That(uut.Add(x, y), Is.EqualTo(9));
-            Assert.That(uut.Subtract(x, y), Is.EqualTo(1));
+            Assert.That(uut.Subtract(x, y), Is.EqualTo(-1));
 
         }
 
@@ -39,12 +39,13 @@ namespace Calculator.Unit.Test
             uut = new Calculator();
         }
 
-        [TestCase(3, 3, 6)]
-        [TestCase(-3, -3, -6)]
-        [TestCase(3, -3, 0)]
-        [TestCase(-3, 0, -3)]
-        [TestCase(0, 0, 0)]
+        //[TestCase(3, 3, 6)]
+        //[TestCase(-3, -3, -6)]
+        //[TestCase(3, -3, 0)]
+        //[TestCase(-3, 0, -3)]
+        //[TestCase(0, 0, 0)]
 
+        [TestCaseSource(typeof(TestCaseSource))]
         public void Add_NegPosNumbers_CorrectResult(int x, int y, int r)
         {
             Assert.That(uut.Add(x, y), Is.EqualTo(r));
@@ -56,6 +57,7 @@ namespace Calculator.Unit.Test
         [TestCase(3, -3, 6)]
         [TestCase(0, 1, -1)]
 
+        [TestCaseSource(typeof(TestCaseSource))]
         public void Subtract_NegPosNumbers_CorrectResult(int x, int y, int r)
         {
             Assert.That(uut.Subtract(x, y), Is.EqualTo(r));
@@ -85,6 +87,20 @@ namespace Calculator.Unit.Test
             Assert.That(uut.Multiply(x, y), Is.EqualTo(r));
         }
 
+
+        //public class CalculatorCombinatorialTests
+        //{
+        //    [Test]
+        //    public void ShouldAddAndDivide(
+        //        [Values(10, 20, 30)] int numToAdd,
+        //        [Values(3, 5, 2)] int numToDivideBy)
+        //    {
+        //        var sut = new Calculator();
+        //        sut.Add(numToAdd);
+        //        sut.Divide(numToDivideBy);
+        //    }
+
+        //}
 
 
     }
