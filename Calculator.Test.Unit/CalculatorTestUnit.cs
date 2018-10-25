@@ -57,7 +57,6 @@ namespace Calculator.Unit.Test
         [TestCase(3, -3, 6)]
         [TestCase(0, 1, -1)]
 
-        [TestCaseSource(typeof(TestCaseSource))]
         public void Subtract_NegPosNumbers_CorrectResult(int x, int y, int r)
         {
             Assert.That(uut.Subtract(x, y), Is.EqualTo(r));
